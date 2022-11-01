@@ -16,5 +16,6 @@
 ![enter image description here](https://i.postimg.cc/YqKx0spk/modal.png)
 
 Para tener un popup que renderize contenido debe definir un modal en el codigo html, debajo de la etiqueta para cerrar el modal puede poner los distintos contenidos que puede renderizar el modal. Cada contenido debe tener un id unico.
+
 ![enter image description here](https://i.postimg.cc/MT0pDHj9/modal2.png)
 Para abrir el modal y cargar contenido solamente ponga en un elemento html la propiedad data-modal con el id único del contenido que quiere cargar
