@@ -44,6 +44,7 @@ body {
 /*==================
     HEADER TITLE
 ====================*/
+
 .header .header__title {
     background-color: var(--header-bg-color);
     font-size: 3rem;
@@ -56,6 +57,7 @@ body {
 /*==================
     CONTROLS
 ====================*/
+
 .controls {
     position: fixed;
     bottom: 20px;
@@ -148,6 +150,7 @@ body {
 /*=====================
 MODAL
 ====================*/
+
 .modal {
     position: absolute;
     top: 0;
@@ -182,7 +185,7 @@ MODAL
 }
 
 .modal-content .close-button:hover {
-        transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .modal.hide, .modal-body.hide {
@@ -200,7 +203,6 @@ MEDIA QUERIES - RESPOSIVE
 }
 
 @media (max-width: 850px) {
-
     .slide { 
         padding: 1rem;
     }
@@ -241,7 +243,6 @@ MEDIA QUERIES - RESPOSIVE
 }
 
 @media (max-width: 600px) {
-
     .header .header__title {
         font-size: 1.2rem;
     }
@@ -262,6 +263,4 @@ MEDIA QUERIES - RESPOSIVE
     .modal-content .close-button {
         font-size: 3rem;
     }
-
 }
-

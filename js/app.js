@@ -1,5 +1,8 @@
 //slide library 1.0
 
+//TODO add sound support to slides
+//TODO add check icon next to button when slide is completed
+
 const slide = (slideSelector) => {
 
     console.log('booting slide', slideSelector);
@@ -28,7 +31,7 @@ const slide = (slideSelector) => {
     const btnOpenSlideList = wrapper.getElementsByClassName('btn-open-slide');
     const contentModalBtns = wrapper.getElementsByClassName('content-modal-btn');
 
-    //if modal is present in DOM store ref in modal var
+    //if modal is present in DOM store ref in modal variable
     const modal = document.getElementById('modal');
 
     //check if there are buttons that can open other slides
@@ -75,7 +78,7 @@ const slide = (slideSelector) => {
                 currentSlideIndex++;
                 controlDir = "next";
             }
-            afterEachSlide();
+            render();
         });
 
         //button prev (Anterior)
@@ -84,7 +87,7 @@ const slide = (slideSelector) => {
                 currentSlideIndex--;
                 controlDir = "prev";
             }
-            afterEachSlide();
+            render();
         });
 
         //button home (Icono casa)
@@ -143,9 +146,9 @@ const slide = (slideSelector) => {
         currentSlideIndex+1 >= slides.length ? btnNext.classList.add('btn-hide') : btnNext.classList.remove('btn-hide');
     }
 
-    //function to execute after each slide is rendered
+    //function to execute everytime we want to update the screen
     //it accepts a callback (optional)
-    function afterEachSlide(cb) {
+    function render(cb) {
         showCurrentActiveSlide();
         showButtons();
 
@@ -158,5 +161,5 @@ const slide = (slideSelector) => {
     addEventListenersToControls();
 
     //render for the first time
-    afterEachSlide();
+    render();
 };
