@@ -1,0 +1,258 @@
+:root {
+    --white-color: #fff;
+    --header-bg-color: #FD3535;
+    --controls-buttons-color: #FD3535;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { 
+    font-size: 62.5%; 
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+/*==================
+    SLIDE
+====================*/
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+/*==================
+    HEADER TITLE
+====================*/
+.header .header__title {
+    background-color: var(--header-bg-color);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white-color);
+    padding: 2rem;
+}
+
+/*==================
+    CONTROLS
+====================*/
+.controls {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls .media {
+    display: flex;
+}
+
+.controls .btn {
+    user-select: none;
+    font-size: 4rem;
+    color: var(--white-color);
+    background: var(--controls-buttons-color);
+    margin: 0px 2rem;
+    transition: all ease .3s;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.controls .btn-hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.controls .btn:hover {
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 0px 24px -5px rgba(0,106,171,1);
+    -moz-box-shadow: 0px 0px 24px -5px rgba(0,106,171,1);
+    box-shadow: 0px 0px 24px -5px rgba(0,106,171,1);
+}
+
+.controls .btn-rounded {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.controls .btn-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-top-right-radius: 60px;
+}
+
+.controls .btn-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-top-left-radius: 60px;
+}
+
+.controls .btn-next i, .btn-prev i{
+    font-size: 6rem;
+}
+
+
+/*==================
+    BODY
+====================*/
+
+.body {
+    overflow: hidden;
+    display: block;
+    justify-content: center;
+    align-self: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.body .hide, .slide.hide {
+    display: none;
+}
+
+.body .show {
+    display: block;
+}
+
+/*=====================
+MODAL
+====================*/
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.modal-content {
+    width: 80%;
+    height: 80%;
+    border: 10px solid var(--controls-buttons-color);
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.modal-content .close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 5rem;
+    color: var(--controls-buttons-color);
+    cursor: pointer;
+    transition: all ease .5s;
+    border-radius: 50%;
+}
+
+.modal-content .close-button:hover {
+        transform: scale(1.1);
+}
+
+.modal.hide, .modal-body.hide {
+    display: none;
+}
+
+/*=====================
+MEDIA QUERIES - RESPOSIVE
+====================*/
+
+@media (max-width: 1150px) {
+    html { 
+        font-size: 55.5%; 
+    }
+}
+
+@media (max-width: 850px) {
+
+    .slide { 
+        padding: 1rem;
+    }
+
+    html { 
+        font-size: 52.5%; 
+    }
+
+    .header .header__title {
+        font-size: 1.8rem;
+    }
+
+    .controls .btn {
+        font-size: 2rem;
+    }
+
+    .controls .btn-next, .controls .btn-prev {
+        padding: 1.4rem;
+        border-radius: 0;
+    }
+
+    .controls .btn-next i, .btn-prev i{
+        font-size: 3rem;
+    }
+
+    .controls .btn-rounded {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .modal-content {
+        width: 100%;
+        height: 100%;
+        border: 4px solid var(--controls-buttons-color);
+        margin: 5px;
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header .header__title {
+        font-size: 1.2rem;
+    }
+
+    .controls .btn {
+        font-size: 1.6rem;
+    }
+
+    .controls .btn-next, .controls .btn-prev {
+        padding: .5rem;
+    }
+
+    .controls .btn-rounded {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .modal-content .close-button {
+        font-size: 3rem;
+    }
+
+}
+
