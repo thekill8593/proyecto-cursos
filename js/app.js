@@ -19,6 +19,10 @@ const slide = (slideSelector) => {
     let currentSlideIndex = 0;
     //direction of the navigation
     let controlDir = "next";
+    //component state
+    const state = {
+        completedModules: {}
+    };
 
     //get all DOM elements from wrapper
     const btnNext = wrapper.querySelector('#btn-next');
@@ -30,9 +34,39 @@ const slide = (slideSelector) => {
     const slides = wrapper.getElementsByClassName('sl');
     const btnOpenSlideList = wrapper.getElementsByClassName('btn-open-slide');
     const contentModalBtns = wrapper.getElementsByClassName('content-modal-btn');
+    
+    const btnsCheck = wrapper.getElementsByClassName('btn-check');
 
     //if modal is present in DOM store ref in modal variable
     const modal = document.getElementById('modal');
+
+    function initializeState () {
+        //if there are buttons that can be checked then initialize the state
+        if (btnsCheck.length) {
+            for (let i = 0; i < btnsCheck.length; i++) {
+                state.completedModules[btnsCheck[i].dataset.check] = false;
+                btnsCheck[i].addEventListener('click', () => {
+                    state.completedModules[btnsCheck[i].dataset.check] = true;
+                    checkForCompletedModule();
+                });
+            }
+        }
+    }
+
+
+    //check if module has been completed when user clicks in the button
+    function checkForCompletedModule() {
+        //console.log(slideSelector, state);
+        if (btnsCheck.length) {
+            for (let i = 0; i < btnsCheck.length; i++) {
+                const key = btnsCheck[i].dataset.check;
+                if (state.completedModules[key]) {
+                    btnsCheck[i].classList.add('btn-check__show');
+                }
+            }
+        }
+    }
+
 
     //check if there are buttons that can open other slides
     //add click event to this buttons
@@ -148,9 +182,10 @@ const slide = (slideSelector) => {
 
     //function to execute everytime we want to update the screen
     //it accepts a callback (optional)
-    function render(cb) {
+    function render () {
         showCurrentActiveSlide();
         showButtons();
+        checkForCompletedModule();
 
         if(typeof cb == "function") {
             cb();
@@ -160,6 +195,10 @@ const slide = (slideSelector) => {
     //add listeners when library loads
     addEventListenersToControls();
 
+    //initialize state
+    initializeState();
+
     //render for the first time
     render();
+
 };
