@@ -6,11 +6,11 @@
     display: flex;
 }
 
-.main-screen .woman-image {
-   width: 22%;
+.main-screen .marco-image {
+   width: 45%;
 }
 
-.main-screen .woman-image img{
+.main-screen .marco-image img{
     width: 100%;
 }
 
@@ -95,7 +95,7 @@
         margin-right: 5px;
     }
 
-    .main-screen .woman-image {
+    .main-screen .marco-image {
         width: 30%;
      }
 }
