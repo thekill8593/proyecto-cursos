@@ -31,24 +31,6 @@
     justify-content: center;
 }
 
-.content-description {
-    margin: 3rem 0;
-    font-size: 3rem;
-    text-align: center;
-}
-
-.content-description.cursive {
-    font-style: italic;
-}
-
-.content-description.bold {
-    font-weight: 700;
-}
-
-.content-description.small {
-    font-size: 2.4rem;
-}
-
 .button-menu-content .content-buttons div {
     width: 20rem;
     opacity: .7;
@@ -84,25 +66,12 @@
     .button-menu-content .content-right {
         width: 80%;
     }
-
-    .content-description {
-        margin: 2rem 0;
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-  
-    .content-description.small {
-        font-size: 1.6rem;
-    }
 }
 
 @media (max-width: 650px) {
     .button-menu-content .content-left {
         display: none;
     }
-    
-
     
     .button-menu-content .content-right {
         width: 100%;

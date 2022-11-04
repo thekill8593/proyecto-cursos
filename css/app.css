@@ -80,6 +80,7 @@ body {
     transition: all ease .3s;
     cursor: pointer;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .controls .btn-hide {
@@ -214,13 +215,77 @@ BUTTON CHECK
 }
 
 .btn-check__left::before {
-    left: 0;
-    top: 0;
+    left: 0 !important;
+    top: 0 !important;
+    right: auto;
+    bottom: auto;
 }
 
 .btn-check__show::before {
     opacity: 1;
     visibility: visible;
+}
+
+.btn-check__white::before {
+    color: #fff;
+}
+
+/*=====================
+MODAL
+====================*/
+
+.modal-body img {
+    width: 100%;
+}
+
+/*=====================
+CONTENT DESCRIPTION
+====================*/
+.content-description {
+    margin: 3rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.content-description.cursive {
+    font-style: italic;
+}
+
+.content-description.bold {
+    font-weight: 700;
+}
+
+.content-description.small {
+    font-size: 2.4rem;
+}
+
+/*=====================
+BUTTONS GROUP
+====================*/
+
+.buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons-group div {
+    position: relative;
+    background-color: green;
+    color: #fff;
+    min-width: 30rem;
+    padding: 2rem;
+    margin: 1rem;
+    font-size: 3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: .8;
+    transition: opacity .2s ease;
+}
+
+.buttons-group div:hover {
+    opacity: 1;
 }
 
 
@@ -278,6 +343,22 @@ MEDIA QUERIES - RESPOSIVE
         margin-right: -20px;
         margin-bottom: -10px;
     }
+
+    .content-description {
+        margin: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+  
+    .content-description.small {
+        font-size: 1.6rem;
+    }
+
+    .buttons-group div {
+        font-size: 1.8rem;
+    }
+
 }
 
 @media (max-width: 600px) {
