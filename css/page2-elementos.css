@@ -1,0 +1,110 @@
+.body .sl img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.modal-body img {
+    width: 100%;
+}
+
+
+.button-menu-content {
+    width: 100%;
+    display: flex;
+}
+
+.button-menu-content .content-left {
+    width: 30%;
+}
+
+.button-menu-content .content-left img {
+    height: 80vh;
+}
+
+.button-menu-content .content-right {
+    width: 70%;
+}
+
+.button-menu-content .content-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content-description {
+    margin: 3rem 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.content-description.cursive {
+    font-style: italic;
+}
+
+.content-description.bold {
+    font-weight: 700;
+}
+
+.content-description.small {
+    font-size: 2.4rem;
+}
+
+.button-menu-content .content-buttons div {
+    width: 20rem;
+    opacity: .7;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.button-menu-content .content-buttons div.smaller {
+    width: 15rem;
+    
+}
+
+.button-menu-content .content-buttons div img {
+    width: 100%;
+}
+
+.button-menu-content .content-buttons div:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1150px) {}
+
+@media (max-width: 850px) {
+    .button-menu-content .content-left {
+        width: 20%;
+    }
+    
+    .button-menu-content .content-left img {
+        height: 30vh;
+    }
+    
+    .button-menu-content .content-right {
+        width: 80%;
+    }
+
+    .content-description {
+        margin: 2rem 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+  
+    .content-description.small {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .button-menu-content .content-left {
+        display: none;
+    }
+    
+
+    
+    .button-menu-content .content-right {
+        width: 100%;
+    }
+}

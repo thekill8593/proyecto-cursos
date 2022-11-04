@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion</title>
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/page1-introduction.css" />
+</head>
+<body>
+
+    <div class="app">
+        <div class="slide" id="slide1">
+            <div class="header">
+                <div class="header__title"><h2 id="sl-title">Tipos de riesgos e intersecciones</h2></div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Tipos de riesgos e intersecciones">
+                    <div class="main-screen">
+                        <div class="woman-image">
+                            <img class="animate__animated animate__slideInLeft" src="assets/suitman.png" alt="">
+                        </div>
+                        <div class="menu-buttons animate__animated animate__shakeX animate__delay-1s">
+                            <a class="btn-open-slide btn-check" data-check="risks_1" data-slide-selector="slide2"><span>Riesgos Delanteros</span></a>
+                            <a class="btn-open-slide btn-check" data-check="risks_2" data-slide-selector="slide3"><span>Riesgos Lateral</span></a>
+                            <a class="btn-open-slide btn-check" data-check="risks_3" data-slide-selector="slide4"><span>Riesgos Traseros</span></a>
+                            <a class="btn-open-slide btn-check" data-check="risks_4" data-slide-selector="slide4"><span>Riesgos en intersecciones</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide hide" id="slide2">
+            <div class="header">
+                <div class="header__title"><h2 id="sl-title">Riesgos Delanteros</h2></div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Riesgos Delanteros">
+                    <img class="animate__animated animate__lightSpeedInLeft" src="assets/tipos_de_riesgos/screen1.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="slide hide" id="slide3">
+            <div class="header">
+                <div class="header__title"><h2 id="sl-title">Riesgos Lateral</h2></div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Riesgos Lateral">
+                    <img class="animate__animated animate__backInRight" src="assets/tipos_de_riesgos/screen2.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide hide" id="slide4">
+            <div class="header">
+                <div class="header__title"><h2 id="sl-title">Riesgos Traseros</h2></div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Riesgos Traseros">
+                    <img class="animate__animated animate__backInRight" src="assets/tipos_de_riesgos/screen3.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+       
+
+    <script src="js/app.js"></script>
+    <script>
+        //initialize slides
+        ['slide1', 'slide2', 'slide3', 'slide4'].forEach(slideSelector => slide(slideSelector));
+
+    </script>
+</body>
+</html>
