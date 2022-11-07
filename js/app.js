@@ -24,6 +24,11 @@ const slide = (slideSelector) => {
         completedModules: {}
     };
 
+    //current audio track
+    let currentAudioTrack = "";
+    //audio player
+    let audioPlayer = new Audio();
+
     //get all DOM elements from wrapper
     const btnNext = wrapper.querySelector('#btn-next');
     const btnPrev = wrapper.querySelector('#btn-prev');
@@ -77,6 +82,7 @@ const slide = (slideSelector) => {
                 wrapper.classList.add('hide');
                 const slideToOpen = btnOpenSlideList[i].dataset.slideSelector;
                 document.getElementById(slideToOpen).classList.remove('hide');
+                stopAudio();
             });
         }
     }
@@ -91,6 +97,7 @@ const slide = (slideSelector) => {
                     const contentToOpen = modal.querySelector(`#${contentModalBtns[i].dataset.modal}`);
                     contentToOpen.classList.remove('hide');
                     modal.classList.remove('hide');
+                    stopAudio();
                 }
             });
         }
@@ -124,12 +131,28 @@ const slide = (slideSelector) => {
             render();
         });
 
+        //button player
+        addClickEventToControl(btnPlay,  () => {
+            if (!currentAudioTrack && !audioPlayer) {
+                return;
+            }
+        
+            if (audioPlayer.paused) {
+                togglePlayerButton(true);
+                audioPlayer.play();
+            } else {
+                togglePlayerButton(false);
+                audioPlayer.pause();
+            }
+        });
+
         //button home (Icono casa)
         addClickEventToControl(btnBack, () => {
             const slideToOpen = btnBack.dataset.slideSelector;
             if (slideToOpen) {
                 wrapper.classList.add('hide');
                 document.getElementById(slideToOpen).classList.remove('hide');
+                stopAudio();
             }
         });
 
@@ -144,6 +167,31 @@ const slide = (slideSelector) => {
                 }
                 modal.classList.add('hide');
             });
+        }
+    }
+
+    //toggle player button
+    function togglePlayerButton(playing) {
+        const btnIcon = btnPlay.querySelector(".fa-solid");
+        if (playing) {
+            btnIcon.classList.remove('fa-play');
+            btnIcon.classList.add('fa-pause');
+        } else {
+            btnIcon.classList.remove('fa-pause');
+            btnIcon.classList.add('fa-play');
+        }
+    }
+
+    //callback when audio ends
+    audioPlayer.addEventListener('ended', () => {
+        togglePlayerButton(false);
+    });
+
+    function stopAudio() {
+        if (audioPlayer && !audioPlayer.paused) {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+            togglePlayerButton(false);
         }
     }
 
@@ -172,12 +220,31 @@ const slide = (slideSelector) => {
         //load title from data-title in the header 
         title.textContent = currentSlide.dataset.title;
         currentSlide.classList.add('show');
+
+        //load audio file to player
+        currentAudioTrack = currentSlide.dataset.audio;
+        if (currentAudioTrack) {
+            togglePlayerButton(false);
+            audioPlayer.src=currentAudioTrack;
+        } else {
+            audioPlayer.pause();
+        }
+    }
+
+    //render player button
+    function showPlayerButton() {
+        if (!currentAudioTrack) {
+            btnPlay.classList.add('hide');
+        } else {
+            btnPlay.classList.remove('hide');
+        }
     }
 
     //render menu buttons
     function showButtons() {
         currentSlideIndex === 0 ? btnPrev.classList.add('btn-hide') : btnPrev.classList.remove('btn-hide');
         currentSlideIndex+1 >= slides.length ? btnNext.classList.add('btn-hide') : btnNext.classList.remove('btn-hide');
+        showPlayerButton();
     }
 
     //function to execute everytime we want to update the screen
