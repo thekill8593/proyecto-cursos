@@ -19,3 +19,11 @@ Para tener un popup que renderize contenido debe definir un modal en el codigo h
 
 ![enter image description here](https://i.postimg.cc/MT0pDHj9/modal2.png)
 Para abrir el modal y cargar contenido solamente ponga en un elemento html la propiedad data-modal con el id único del contenido que quiere cargar
+
+## Audio
+
+Para generar el texto desde la imagen usamos OCR
+en este website: https://www.onlineocr.net/
+
+Para generar texto a archivo de audio utilizamos la siguiente herramienta:
+https://ttsmp3.com/
