@@ -176,6 +176,7 @@ MODAL
     background-color: #fff;
     position: relative;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .modal-content .close-button {
@@ -196,6 +197,11 @@ MODAL
 .modal.hide, .modal-body.hide {
     display: none;
 }
+
+.modal-body img {
+    width: 100%;
+}
+
 
 /*=====================
 BUTTON CHECK
@@ -234,13 +240,6 @@ BUTTON CHECK
     color: #fff;
 }
 
-/*=====================
-MODAL
-====================*/
-
-.modal-body img {
-    width: 100%;
-}
 
 /*=====================
 CONTENT DESCRIPTION
@@ -292,6 +291,27 @@ BUTTONS GROUP
     opacity: 1;
 }
 
+.buttons-group.two-row-button {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.buttons-group.two-row-button div {
+    margin-bottom: 3rem;
+}
+
+.two-row-content {
+    display: flex;
+}
+
+.two-row-content div {
+    width: 50%;
+}
+
+.two-row-content .menu-buttons {
+    width: 100%;
+    padding-left: 2rem;
+}
 
 /*=====================
 MEDIA QUERIES - RESPOSIVE
@@ -385,5 +405,9 @@ MEDIA QUERIES - RESPOSIVE
 
     .modal-content .close-button {
         font-size: 3rem;
+    }
+
+    .buttons-group.two-row-button div {
+        margin-bottom: 1rem;
     }
 }
