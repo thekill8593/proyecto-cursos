@@ -52,7 +52,56 @@ body {
     text-align: center;
     color: var(--white-color);
     padding: 2rem;
+    position: relative;
 }
+
+.header .header__title::after {
+    content: '';
+    width: 160px;
+    height: 100px;
+    position: absolute;
+    background-image: url(../assets/logos/sistemas_de_gestion.jpg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    right: 0;
+    top: 0px;
+}
+
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+.header::after {
+    content: '';
+    width: 160px;
+    height: 70px;
+    position: absolute;
+    background-image: url(../assets/logos/final_tabasco.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    margin-top: 10px;
+}
+
+.header::before {
+    content: '';
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    background-image: url(../assets/logos/carso.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 0;
+    margin-top: 90px;
+    margin-left: 0px;
+}
+
 
 /*==================
     CONTROLS
@@ -73,7 +122,7 @@ body {
 
 .controls .btn {
     user-select: none;
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: var(--white-color);
     background: var(--controls-buttons-color);
     margin: 0px 2rem;
@@ -109,7 +158,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-top-right-radius: 60px;
 }
 
@@ -117,12 +166,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
     border-top-left-radius: 60px;
 }
 
 .controls .btn-next i, .btn-prev i{
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 
@@ -262,6 +311,10 @@ CONTENT DESCRIPTION
     font-size: 2.4rem;
 }
 
+.content-description.justify {
+    text-align: justify;
+}
+
 /*=====================
 BUTTONS GROUP
 ====================*/
@@ -313,13 +366,92 @@ BUTTONS GROUP
     padding-left: 2rem;
 }
 
+.buttons-group.width-sm div{
+    min-width: 10rem;
+}
+
+.buttons-group.size-lg div {
+    font-size: 5rem;
+}
+
 /*=====================
 MEDIA QUERIES - RESPOSIVE
 ====================*/
 
+
+
+@media (max-width: 1300px) {
+    .header .header__title::after {
+        width: 160px;
+        height: 100px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        margin-top: 10px;
+    }
+    
+    .header::before {
+        width: 80px;
+        height: 50px;
+        left: 0;
+        margin-top: 80px;
+        margin-left: 0px;
+    }
+
+    .controls .btn {
+        font-size: 2rem;
+        margin: 0px 1rem;
+       
+    }
+
+    .controls .btn-next, .controls .btn-prev  {
+        padding: 1.4rem;
+    }
+
+    .controls .btn-next i, .btn-prev i{
+        font-size: 4rem;
+    }
+  
+    .controls .btn-rounded {
+        width: 7rem;
+        height: 7rem;
+    }
+    
+}
+
+
 @media (max-width: 1150px) {
     html { 
         font-size: 55.5%; 
+    }
+
+    .header .header__title {
+        font-size: 1.8rem;
+    }
+
+    .header .header__title::after {
+        width: 120px;
+        height: 65px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        margin-top: 0px;
+        width: 100px;
+        height: 60px;
+    }
+    
+    .header::before {
+        width: 70px;
+        height: 40px;
+        left: 0;
+        margin-top: 55px;
+        margin-left: 0px;
     }
 }
 
@@ -333,7 +465,7 @@ MEDIA QUERIES - RESPOSIVE
     }
 
     .header .header__title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .controls .btn {
@@ -383,11 +515,40 @@ MEDIA QUERIES - RESPOSIVE
         font-size: 1.8rem;
     }
 
+    .buttons-group.width-sm div{
+        min-width: 8rem;
+    }
+
+    .buttons-group.size-lg div {
+        font-size: 3rem;
+    }
+
+    .header .header__title::after {
+        width: 100px;
+        height: 60px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        width: 100px;
+        height: 60px;
+    }
+    
+    .header::before {
+        width: 60px;
+        height: 40px;
+        left: 0;
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
 }
 
 @media (max-width: 600px) {
     .header .header__title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .controls .btn {
@@ -409,5 +570,55 @@ MEDIA QUERIES - RESPOSIVE
 
     .buttons-group.two-row-button div {
         margin-bottom: 1rem;
+    }
+
+    .header .header__title::after {
+        width: 80px;
+        height: 50px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        width: 80px;
+        height: 50px;
+    }
+    
+    .header::before {
+        width: 50px;
+        height: 30px;
+        left: 0;
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .header .header__title {
+        font-size: .9rem;
+    }
+
+
+    .header .header__title::after {
+        width: 35px;
+        height: 50px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .header::before {
+        width: 30px;
+        height: 30px;
+        left: 0;
+        margin-top: 36px;
+        margin-left: 0px;
     }
 }
