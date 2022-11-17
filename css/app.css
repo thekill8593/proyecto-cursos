@@ -379,11 +379,10 @@ BUTTONS GROUP
     font-size: 5rem;
 }
 
+
 /*=====================
 MEDIA QUERIES - RESPOSIVE
 ====================*/
-
-
 
 @media (max-width: 1600px) {
     .header .header__title::after {
