@@ -3,9 +3,9 @@
 //TODO add sound support to slides
 //TODO add check icon next to button when slide is completed
 
-const slide = (slideSelector) => {
+const slide = (slideSelector, storageName="modules_completed") => {
 
-    console.log('booting slide', slideSelector);
+    //console.log('booting slide', slideSelector);
 
     //get wrapper from DOM
     const wrapper = document.getElementById(slideSelector);
@@ -23,6 +23,7 @@ const slide = (slideSelector) => {
     const state = {
         completedModules: {}
     };
+    const pageName = document.getElementById('page')?.dataset?.pageId || "";
 
     //current audio track
     let currentAudioTrack = "";
@@ -58,7 +59,6 @@ const slide = (slideSelector) => {
         }
     }
 
-
     //check if module has been completed when user clicks in the button
     function checkForCompletedModule() {
         //console.log(slideSelector, state);
@@ -67,8 +67,31 @@ const slide = (slideSelector) => {
                 const key = btnsCheck[i].dataset.check;
                 if (state.completedModules[key]) {
                     btnsCheck[i].classList.add('btn-check__show');
+                    //console.log('completed module', pageName + key);
+                    //console.log(state.completedModules);
+                    updateModuleState(state);
                 }
             }
+        }
+    }
+
+    function updateModuleState() {
+        const savedState = JSON.parse(localStorage.getItem(storageName)) || {};
+        if (!savedState[pageName]) {
+            savedState[pageName] = {};
+        } 
+        savedState[pageName][slideSelector] = state.completedModules;
+        localStorage.setItem('modules_completed', JSON.stringify(savedState));
+    }
+
+    function loadStateFromStorage() {
+        const savedState = JSON.parse(localStorage.getItem(storageName)) || {};
+        if (savedState[pageName]) {
+            if (savedState[pageName][slideSelector]) {
+                state.completedModules = savedState[pageName][slideSelector];
+            }
+        } else {
+            updateModuleState();
         }
     }
 
@@ -259,13 +282,82 @@ const slide = (slideSelector) => {
         }
     }
 
+
     //add listeners when library loads
     addEventListenersToControls();
 
     //initialize state
     initializeState();
 
+    //load completed modules data from storage
+    loadStateFromStorage();
+
     //render for the first time
     render();
 
 };
+
+
+const completedModules = (pagesRoute, storageName) => {
+
+    let state = {};
+
+    function loadStateFromStorage() {
+        const savedState = JSON.parse(localStorage.getItem(storageName)) || {};
+        state = savedState;
+        unlockCompletedModules(state);
+    }
+
+    function unlockCompletedModules (modules) {
+        const modulesResult = {};
+        for (let key in modules) {
+            modulesResult[key] = countCompletedModules(modules[key], 0);
+        }
+
+        //console.log(modulesResult);
+
+        for (let i = 0; i < pagesRoute.length; i++) {
+            const result = modulesResult[pagesRoute[i].pageName];
+
+            //console.log(pagesRoute[i].pageName, result)
+
+            if (result === undefined || result === null) {
+                break;
+            }
+
+
+            if (result >= pagesRoute[i].slides && i < pagesRoute.length) {
+                if (Array.isArray(pagesRoute[i+1].pageName)) {
+                    pagesRoute[i+1].pageName.forEach(p => unlockFromDOM(p));
+                } else {
+                    unlockFromDOM(pagesRoute[i+1].pageName);
+                }
+            }
+        }
+    }
+
+
+    function unlockFromDOM (pageSelector) {
+        console.log("UNLOCK ", pageSelector);
+        const el = document.getElementById(pageSelector);
+        el.classList.remove('disabled-wrapper');
+        el.classList.add('enable-wrapper');
+    }
+
+    function countCompletedModules(obj, counter) {
+        for (let key in obj) {
+            let val = obj[key];
+            if (typeof val === 'object') {
+                counter = countCompletedModules(val, counter)
+            } else {
+                if (obj[key] === true) {
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+
+    loadStateFromStorage();
+
+}
