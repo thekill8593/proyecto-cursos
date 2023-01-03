@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion</title>
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/page1-introduction.css" />
+</head>
+
+<body>
+
+    <div class="app" id="page" data-page-id="introduction">
+        <div class="slide" id="slide1">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Manejo defensivo</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Manejo defensivo">
+                    <div class="main-screen">
+                        <div class="woman-image">
+                            <img class="animate__animated animate__slideInLeft" src="assets/marco-2.png" alt="">
+                        </div>
+                        <div class="menu-buttons animate__animated animate__shakeX animate__delay-1s">
+                            <a class="btn-open-slide btn-check" data-check="introduction"
+                                data-slide-selector="slide2"><i class="fa-solid fa-book"></i>
+                                <span>Introducción</span></a>
+                            <a class="btn-open-slide btn-check" data-check="objectives" data-slide-selector="slide3"><i
+                                    class="fa-solid fa-book"></i> <span>Objetivo <br>General</span></a>
+                            <a class="btn-open-slide btn-check" data-check="definitions" data-slide-selector="slide4"><i
+                                    class="fa-solid fa-book"></i> <span>definiciones</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" href="./index.html"><i
+                            class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide hide" id="slide2">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Introducción</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Introducción" data-audio="audio/audio1.mp3">
+                    <img class="animate__animated animate__lightSpeedInLeft" src="assets/introduccion/screen1.png"
+                        alt="">
+                </div>
+                <div class="sl hide" data-title="Introducción" data-audio="audio/audio2.mp3">
+                    <img class="animate__animated animate__lightSpeedInLeft" src="assets/introduccion/screen2.png"
+                        alt="">
+                </div>
+                <div class="sl hide" data-title="Introducción" data-audio="audio/audio3.mp3">
+                    <img class="animate__animated animate__lightSpeedInLeft" src="assets/introduccion/screen3.png"
+                        alt="">
+                </div>
+                <div class="sl hide" data-title="Introducción" data-audio="audio/audio4.mp3">
+                    <img class="animate__animated animate__lightSpeedInLeft" src="assets/introduccion/screen4.png"
+                        alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i
+                            class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide hide" id="slide3">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Objetivo General</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Objetivo General" data-audio="audio/audio5.mp3">
+                    <img class="animate__animated animate__backInRight" src="assets/introduccion/screen5.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i
+                            class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide hide" id="slide4">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Definiciones</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio6.mp3">
+                    <img class="animate__animated animate__bounceIn" src="assets/introduccion/screen6.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio7.mp3">
+                    <img class="animate__animated animate__backInUp" src="assets/introduccion/screen7.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio8.mp3">
+                    <img class="animate__animated animate__zoomInUp" src="assets/introduccion/screen8.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio9.mp3">
+                    <img class="animate__animated animate__zoomInUp" src="assets/introduccion/screen9.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio10.mp3">
+                    <img class="animate__animated animate__zoomInUp" src="assets/introduccion/screen10.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio11.mp3">
+                    <img class="animate__animated animate__zoomInUp" src="assets/introduccion/screen11.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio12.mp3">
+                    <img class="animate__animated animate__zoomInUp" src="assets/introduccion/screen12.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio13.mp3">
+                    <img class="animate__animated animate__slideInRight" src="assets/introduccion/screen13.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio14.mp3">
+                    <img class="animate__animated animate__slideInLeft" src="assets/introduccion/screen14.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio15.mp3">
+                    <img class="animate__animated animate__slideInRight" src="assets/introduccion/screen15.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio16.mp3">
+                    <img class="animate__animated animate__slideInLeft" src="assets/introduccion/screen16.png" alt="">
+                </div>
+                <div class="sl hide" data-title="Definiciones" data-audio="audio/audio17.mp3">
+                    <img class="animate__animated animate__slideInRight" src="assets/introduccion/screen17.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i
+                            class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/app.js"></script>
+        <script>
+            //initialize slides
+            ['slide1', 'slide2', 'slide3', 'slide4'].forEach(slideSelector => slide(slideSelector));
+
+        </script>
+</body>
+
+</html>

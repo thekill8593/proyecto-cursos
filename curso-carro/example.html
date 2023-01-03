@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/example.css" />
+</head>
+
+<body>
+    <div class="app">
+
+        <div class="slide" id="slide1">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Manejo defensivo</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="estadisticas" data-audio="audio/demo1.mp3">
+                    <img class="animate__animated animate__flipInX animate__repeat-1"
+                        src="assets/estadisticas/screen1.png" alt="">
+                </div>
+                <div class="sl hide" data-title="estadisticas" data-audio="audio/demo2.mp3">
+                    <img class="animate__animated animate__rubberBand animate__repeat-1"
+                        src="assets/estadisticas/screen2.png" alt="">
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__swing animate__repeat-1"
+                        src="assets/estadisticas/screen3.png" alt="">
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__lightSpeedInLeft animate__repeat-1"
+                        src="assets/estadisticas/screen4.png" alt="">
+                </div>
+                <div class="sl hide" data-title="manejo defensivo">
+                    <a class="btn-open-slide" data-slide-selector="slide2">option 1</a>
+                    <a class="btn-open-slide" data-slide-selector="">option 1</a>
+                    <a class="btn-open-slide" data-slide-selector="">option 1</a>
+                    <a class="btn-open-slide" data-slide-selector="">option 1</a>
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__backInRight animate__repeat-1"
+                        src="assets/estadisticas/screen5.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i id="btn-play-icon"
+                            class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide hide" id="slide2">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Manejo defensivo</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="estadisticas" data-audio="audio/demo1.mp3">
+                    <a class="btn-open-slide" data-slide-selector="slide3">option 5</a>
+                    <a class="btn-open-slide" data-slide-selector="">option 6</a>
+                    <a class="btn-open-slide" data-slide-selector="">option 7</a>
+                    <a class="btn-open-slide" data-slide-selector="">option 8</a>
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__flipInX animate__repeat-1"
+                        src="assets/estadisticas/screen2.png" alt="">
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__rubberBand animate__repeat-1"
+                        src="assets/estadisticas/screen3.png" alt="">
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__swing animate__repeat-1"
+                        src="assets/estadisticas/screen4.png" alt="">
+                </div>
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__lightSpeedInLeft animate__repeat-1"
+                        src="assets/estadisticas/screen5.png" alt="">
+                </div>
+
+                <div class="sl hide" data-title="estadisticas">
+                    <img class="animate__animated animate__backInRight animate__repeat-1"
+                        src="assets/estadisticas/screen5.png" alt="">
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide1"><i
+                            class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slide hide" id="slide3">
+            <div class="header">
+                <div class="header__title">
+                    <h2 id="sl-title">Manejo defensivo</h2>
+                </div>
+            </div>
+            <div class="body" id="body">
+                <div class="sl hide" data-title="probando otro nivel" data-audio="audio/demo2.mp3">
+                    <div class="button-menu-content">
+                        <div class="content-left content-buttons animate__animated animate__bounceInLeft"><img
+                                src="assets/woman.png" alt=""></div>
+                        <div class="content-right">
+                            <div class="content-description">
+                                <p>Haz clic en cada botón para ver el contenido</p>
+                            </div>
+                            <div class="content-buttons animate__animated animate__bounceInRight">
+                                <div class="content-modal-btn btn-check btn-check__left" data-check="problems"
+                                    data-modal="content1"><img src="assets/problems.png" alt=""></div>
+                                <div class="content-modal-btn btn-check btn-check__left" data-check="routes"
+                                    data-modal="content2"><img src="assets/routes.png" alt=""></div>
+                                <div><img src="assets/distractions.png" alt=""></div>
+                                <div><img src="assets/tiredness.png" alt=""></div>
+                                <div><img src="assets/alcohol.png" alt=""></div>
+                                <div><img src="assets/medicine.png" alt=""></div>
+                                <div><img src="assets/laws.png" alt=""></div>
+                                <div><img src="assets/authority.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <div><a class="btn btn-prev" id="btn-prev"><i class="fa-solid fa-angle-left"></i> Anterior</i></a></div>
+                <div class="media">
+                    <a class="btn btn-rounded btn-play" id="btn-play"><i class="fa-solid fa-play"></i></a>
+                    <a class="btn btn-rounded btn-back" id="btn-back" data-slide-selector="slide2"><i
+                            class="fa-solid fa-house"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-next" id="btn-next">Siguiente <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal hide" id="modal">
+        <div class="modal-content animate__animated animate__zoomIn">
+            <a class="close-button" id="modal-close-btn"><i class="fa-solid fa-circle-xmark"></i></a>
+            <div class="modal-body hide" id="content1">content 1</div>
+            <div class="modal-body hide" id="content2">content 2</div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        //initialize slides
+        ['slide1', 'slide2', 'slide3'].forEach(slideSelector => slide(slideSelector));
+
+    </script>
+</body>
+
+</html>
