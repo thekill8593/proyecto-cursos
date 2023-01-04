@@ -319,7 +319,7 @@ const completedModules = (pagesRoute, storageName) => {
         for (let i = 0; i < pagesRoute.length; i++) {
             const result = modulesResult[pagesRoute[i].pageName];
 
-            //console.log(pagesRoute[i].pageName, result)
+            console.log(pagesRoute[i].pageName, result)
 
             if (result === undefined || result === null) {
                 break;
@@ -342,6 +342,10 @@ const completedModules = (pagesRoute, storageName) => {
         const el = document.getElementById(pageSelector);
         el.classList.remove('disabled-wrapper');
         el.classList.add('enable-wrapper');
+        if (pageSelector === "begin-exam") {
+            document.getElementById('begin-exam-locked').remove();
+            document.getElementById('begin-exam-unlocked').classList.remove("hide");
+        }
     }
 
     function countCompletedModules(obj, counter) {

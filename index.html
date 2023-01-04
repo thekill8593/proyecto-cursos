@@ -84,6 +84,11 @@
             color:green;
             text-decoration: line-through;
         }
+
+        #begin-exam-unlocked.hide {
+            display: none;
+        }
+        
     </style>
 </head>
 <body>
@@ -317,7 +322,12 @@
                 </button>
             </h2>
             <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body">
+                    <div id="begin-exam">
+                        <p id="begin-exam-locked">Evaluación no disponible hasta que no completes el curso</p>
+                        <a id="begin-exam-unlocked" class="hide" href="exam.html">Comenzar la evaluación</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="accordion-item">
@@ -341,54 +351,55 @@
             pageName: "introduction",
             slides: 3
         },
+        // {
+        //     pageName: "elements_traffic",
+        //     slides: 25
+        // },
+        // {
+        //     pageName: "traffic_accidents",
+        //     slides: 0
+        // },
+        // {
+        //     pageName: "risks",
+        //     slides: 9
+        // },
+        // {
+        //     pageName: "history",
+        //     slides: 0
+        // },
+        // {
+        //     pageName: "security",
+        //     slides: 5
+        // },
+        // {
+        //     pageName: "signals",
+        //     slides: 10
+        // },
+        // {
+        //     pageName: "vial_rules",
+        //     slides: 18
+        // },
+        // {
+        //     pageName: "risks_factors",
+        //     slides: 8
+        // },
+        // {
+        //     pageName: "act_accidents",
+        //     slides: 13
+        // },
+        // {
+        //     pageName: "traffic_offense",
+        //     slides: 50
+        // },
         {
-            pageName: "elements_traffic",
-            slides: 25
-        },
-        {
-            pageName: "traffic_accidents",
-            slides: 0
-        },
-        {
-            pageName: "risks",
-            slides: 9
-        },
-        {
-            pageName: "history",
-            slides: 0
-        },
-        {
-            pageName: "security",
-            slides: 5
-        },
-        {
-            pageName: "signals",
-            slides: 10
-        },
-        {
-            pageName: "vial_rules",
-            slides: 18
-        },
-        {
-            pageName: "risks_factors",
-            slides: 8
-        },
-        {
-            pageName: "act_accidents",
-            slides: 13
-        },
-        {
-            pageName: "traffic_offense",
-            slides: 50
-        },
-        {
-            pageName: ["video5", "video2", "video3", "video4"],
+            pageName: ["video5", "video2", "video3", "video4", "begin-exam"],
             slides: 0 
         },
 
     ]
 
     const modules = completedModules(pagesRoute, "modules_completed");
+
 </script>
 
 </body>
