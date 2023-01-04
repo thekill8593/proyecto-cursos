@@ -319,7 +319,7 @@ const completedModules = (pagesRoute, storageName) => {
         for (let i = 0; i < pagesRoute.length; i++) {
             const result = modulesResult[pagesRoute[i].pageName];
 
-            console.log(pagesRoute[i].pageName, result)
+            //console.log(pagesRoute[i].pageName, result)
 
             if (result === undefined || result === null) {
                 break;

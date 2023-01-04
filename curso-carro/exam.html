@@ -228,6 +228,7 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <p>8. ¿Qué indica la siguiente señal de tránsito?</p>
+                    <img src="assets/signal_1.png" alt="">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q8" id="a19" value="a19">
                         <label class="form-check-label" for="a19">
@@ -408,76 +409,7 @@ const exam = () => {
         window.location.href = "index.html";
     }
 
-    const correctAnswers = [
-        {
-            value: 'a1',
-            score: 10
-        },
-        {
-            value: 'a6',
-            score: 10
-        },
-        {
-            value: 'a10',
-            score: 10
-        },
-        {
-            value: 'a12',
-            score: 10
-        },
-        {
-            value: 'visual',
-            score: 2.5
-        },
-        {
-            value: 'auditivas',
-            score: 2.5
-        },
-        {
-            value: 'fisicas',
-            score: 2.5
-        },
-        {
-            value: 'cognitivas',
-            score: 2.5
-        },
-        {
-            value: 'a16',
-            score: 10
-        },
-        {
-            value: 'a17',
-            score: 10
-        },
-        {
-            value: 'a22',
-            score: 10
-        },
-        {
-            value: 'a26',
-            score: 10
-        },
-        {
-            value: 'humedad',
-            score: 2
-        },
-        {
-            value: 'visibilidad',
-            score: 2
-        },
-        {
-            value: 'trafico',
-            score: 2
-        },
-        {
-            value: 'neblina',
-            score: 2
-        },
-        {
-            value: 'rafagas',
-            score: 2
-        }
-    ];
+    const correctAnswers=[{value:"a1",score:10},{value:"a6",score:10},{value:"a10",score:10},{value:"a12",score:10},{value:"visual",score:2.5},{value:"auditivas",score:2.5},{value:"fisicas",score:2.5},{value:"cognitivas",score:2.5},{value:"a16",score:10},{value:"a17",score:10},{value:"a22",score:10},{value:"a26",score:10},{value:"humedad",score:2},{value:"visibilidad",score:2},{value:"trafico",score:2},{value:"neblina",score:2},{value:"rafagas",score:2}];
 
 
     const errorAlert = document.getElementById('error-alert');
