@@ -1,0 +1,293 @@
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.img-view img{
+    max-width: 675px !important;
+    max-height: 410px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.disabled-button-accordion {
+    color: #888;
+}
+
+.locked-wrapper {
+    position: relative;
+}
+
+
+.locked-wrapper.disabled-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: #eee;
+    z-index: 1;
+}
+
+.locked-wrapper.enable-wrapper i {
+    display: none;
+}
+
+.locked-wrapper div {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.locked-wrapper a {
+    text-decoration: none;
+
+}
+
+.locked-wrapper.disabled-wrapper::after {
+    content: '';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.completed-button-accordion {
+    color:green;
+    text-decoration: line-through;
+}
+
+#begin-exam-unlocked.hide {
+    display: none;
+}
+
+/*==================
+HEADER TITLE
+====================*/
+
+
+.header .header__title {
+background-color: #FD3535;
+font-size: 2rem;
+text-transform: uppercase;
+text-align: center;
+color: #fff;
+padding: 1.6rem;
+position: relative;
+font-weight: 500;
+}
+
+.header .header__title::after {
+content: '';
+width: 160px;
+height: 100px;
+position: absolute;
+background-image: url(../assets/logos/sistemas_de_gestion.jpg);
+background-position: center center;
+background-size: 100%;
+background-repeat: no-repeat;
+background-color: white;
+right: 0;
+top: 0px;
+}
+
+.header {
+position: relative;
+z-index: 1;
+margin-bottom: 2rem;
+}
+
+.header::after {
+content: '';
+width: 160px;
+height: 70px;
+position: absolute;
+background-image: url(../assets/logos/final_tabasco.png);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+left: 0;
+top: 0;
+margin-top: 10px;
+}
+
+.header::before {
+content: '';
+width: 160px;
+height: 50px;
+position: absolute;
+background-image: url(../assets/logos/carso.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100%;
+left: 0;
+margin-top: 95px;
+margin-left: 0px;
+}
+
+
+/*=====================
+MEDIA QUERIES - RESPOSIVE
+====================*/
+
+@media (max-width: 1600px) {
+
+  
+    .header .header__title::after {
+        width: 160px;
+        height: 100px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        margin-top: 10px;
+    }
+    
+    .header::before {
+        width: 90px;
+        height: 50px;
+        left: 0;
+        margin-top: 90px;
+        margin-left: 0px;
+    }
+
+}
+
+
+@media (max-width: 1150px) {
+   
+    .header .header__title {
+        font-size: 1.4rem;
+        padding: .9rem;
+    }
+
+    .header .header__title::after {
+        width: 120px;
+        height: 65px;
+        right: 0;
+        top: 0px;
+    }
+    
+    .header::after {
+        top: 0;
+        margin-top: 0px;
+        width: 100px;
+        height: 60px;
+    }
+    
+    .header::before {
+        width: 70px;
+        height: 40px;
+        left: 0;
+        margin-top: 55px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .header .header__title {
+        font-size: 1rem;
+        padding: .6rem;
+    }
+
+    .header .header__title::after {
+        width: 100px;
+        height: 60px;
+        right: 0;
+        top: -6px;
+    }
+    
+    .header::after {
+        top: -6px;
+        width: 100px;
+        height: 60px;
+    }
+    
+    .header::before {
+        width: 60px;
+        height: 40px;
+        left: 0;
+        margin-top: 35px;
+        margin-left: 0px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .header .header__title {
+        font-size: .8rem;
+    }
+
+    .header .header__title::after {
+        width: 80px;
+        height: 50px;
+        right: 0;
+        top: -5px;
+    }
+    
+    .header::after {
+        top: -5px;
+        width: 80px;
+        height: 50px;
+    }
+    
+    .header::before {
+        width: 50px;
+        height: 30px;
+        left: 0;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .header .header__title {
+        font-size: .9rem;
+    }
+
+
+    .header .header__title::after {
+        width: 35px;
+        height: 50px;
+        right: 0;
+        top: -10px;
+        display: none;
+    }
+    
+    .header::after {
+        top: -5px;
+        width: 50px;
+        height: 50px;
+        display: none;
+
+    }
+    
+    .header::before {
+        width: 30px;
+        height: 30px;
+        left: 0;
+        margin-top: 25px;
+        margin-left: 0px;
+        display: none;
+
+    }
+}

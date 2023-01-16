@@ -10,328 +10,335 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/font-awesome.css" />
-    <style>
-        .video-responsive {
-            height: 0;
-            overflow: hidden;
-            padding-bottom: 56.25%;
-            padding-top: 30px;
-            position: relative;
-        }
-        .video-responsive iframe, .video-responsive object, .video-responsive embed {
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-        }
-
-        .img-view img{
-            max-width: 675px !important;
-            max-height: 410px !important;
-            width: 100% !important;
-            height: 100% !important;
-        }
-
-        .disabled-button-accordion {
-            color: #888;
-        }
-
-        .locked-wrapper {
-            position: relative;
-        }
-
-
-        .locked-wrapper.disabled-wrapper i {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 4rem;
-            color: #eee;
-            z-index: 1;
-        }
-
-        .locked-wrapper.enable-wrapper i {
-            display: none;
-        }
-
-        .locked-wrapper div {
-            font-size: 1.2rem;
-            color: #555;
-        }
-
-        .locked-wrapper a {
-            text-decoration: none;
-
-        }
-
-        .locked-wrapper.disabled-wrapper::after {
-            content: '';
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .completed-button-accordion {
-            color:green;
-            text-decoration: line-through;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div class="container">
-    <div><h1 class="h2 text-primary">OPERACIÓN SEGURA DE MOTOCICLETAS (CICSA)</h1></div>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-                <button id="introduction" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    INTRODUCCIÓN
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                 data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body  d-flex align-items-center justify-content-center">
-                    <a class="large-image img-view" href="./page1-introduction.html" >
-                        <img style="width: 675px; height: 410px;" src="assets/navbar/IntroduccionV6.png" alt=""/>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item" >
-            <h2 class="accordion-header" id="flush-headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                    MÓDULO 1. DOCUMENTACIÓN DEL MOTOCICLISTA
-                </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body  d-flex align-items-center flex-wrap justify-content-center">
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="elements_traffic">
-                            <a class="large-image img-view" href="./page2-elementos.html">
-                                <div>Elementos del manejo defensivo</div>
-                                <img src="assets/navbar/elementos-manejo-defensivo.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                   <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="traffic_accidents">
-                            <a class="large-image img-view" href="./page2-estadisticas.html" >
-                                <div>Estadísticas accidentes de tránsito</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/estadisticas.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                   </div>
-
-                    <div>
-                        <div class="locked-wrapper disabled-wrapper" id="risks">
-                            <a class="large-image img-view" href="./page2-tipos-de-riesgos.html" >
-                                <div>Tipos de riesgos e intersecciones</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/tipos-riesgos.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    MÓDULO 2. SEGURIDAD VIAL
-                </button>
-            </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body  d-flex align-items-center flex-wrap justify-content-center">
-                    
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="history">
-                            <a class="large-image img-view" href="./page3-historia.html" >
-                                <div>Historia</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/historia-vial.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="security">
-                            <a class="large-image img-view" href="./page4-seguridad-vial.html" >
-                                <div>Seguridad Vial</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/seguridadVial.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="signals">
-                            <a class="large-image img-view" href="./page5-senalizacion-vial.html" >
-                                <div>Señalización vial</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                </div>    
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                    MÓDULO 3. NORMAS DE TRÁNSITO
-                </button>
-            </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body  d-flex align-items-center flex-wrap justify-content-center">
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="vial_rules">
-                            <a class="large-image img-view" href="./page6-normas-de-transito.html " >
-                                <div>Normas de Transito</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/normasTransito.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                       
-                        <div class="locked-wrapper disabled-wrapper" id="risks_factors">
-                            <a class="large-image img-view" href="./page7-factores_riesgo.html" >
-                                <div>Factores de riesgo</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/factoresRiesgo.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="act_accidents">
-                            <a class="large-image img-view" href="./page8-actuacion-accidentes-transito.html" >
-                                <div>Actuación frente accidentes de tránsito</div>
-                                <img style="width: 675px; height: 410px;"  src="assets/navbar/accidentesTransito.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                </div>    
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingFive">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                    MÓDULO 4. INFRACCIONES DE TRÁNSITO
-                </button>
-            </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="traffic_offense">
-                            <a class="large-image img-view" href="./page9-infracciones-de-transito.html" >
-                                <div>Infracciones de tránsito</div>
-                                <img style="width: 675px; height: 410px;" src="assets/navbar/infraccionesTransito.png" alt=""/>
-                            </a>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingSix">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                    MÓDULO 5. VIDEO CONDUCCIÓN DEFENSIVA
-                </button>
-            </h2>
-            <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                <div class="mb-5">
-                    <div class="locked-wrapper disabled-wrapper" id="video5">
-                        <h3>conducción defensiva</h3>
-                        <div class="video-responsive">
-                            <iframe src="https://www.youtube.com/embed/J8ftyZrntwA" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <i class="fa-solid fa-lock"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingEight">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-                    VIDEOS
-                </button>
-            </h2>
-            <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="video2">
-                            <h3>Video #1. Uso de glorieta</h3>
-                            <div class="video-responsive">
-                                <iframe src="https://www.youtube.com/embed/KZFtTX6-gPY" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="video3">
-                            <h3>Video #2. Exceso de velocidad</h3>
-                            <div class="video-responsive">
-                                <iframe src="https://www.youtube.com/embed/6b58sghB2ac" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-
-                    <div class="mb-5">
-                        <div class="locked-wrapper disabled-wrapper" id="video4">
-                            <h3>Video #3. Puntos ciegos</h3>
-                            <div class="video-responsive">
-                                <iframe src="https://www.youtube.com/embed/zEXVBtzOh8k" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <i class="fa-solid fa-lock"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTen">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
-                    EVALUACIÓN FINAL
-                </button>
-            </h2>
-            <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingEleven">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                    ¡DESCARGA AQUÍ TU CERTIFICADO!
-                </button>
-            </h2>
-            <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-            </div>
+    <div class="header">
+        <div class="header__title">
+            <span id="sl-title">OPERACIÓN SEGURA DE MOTOCICLETAS (CICSA)</span>
         </div>
     </div>
-</div>
+    <div class="container mb-4">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button id="introduction" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        INTRODUCCIÓN
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body  d-flex align-items-center justify-content-center">
+                        <a class="large-image img-view" href="./page1-introduction.html" >
+                            <img style="width: 675px; height: 410px;" src="assets/navbar/IntroduccionV6.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item" >
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        MÓDULO 1. DOCUMENTACIÓN DEL MOTOCICLISTA
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body  d-flex align-items-center flex-wrap justify-content-center">
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="biker_documentation">
+                                <a class="large-image img-view" href="./page1-documentacion-del-motociclista.html">
+                                    <div>Documentación del motociclista</div>
+                                    <img src="assets/navbar/elementos-manejo-defensivo.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        MÓDULO 2. SISTEMA DE SEGURIDAD ACTIVA
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body  d-flex align-items-center flex-wrap justify-content-center">
+                        
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="biker_active_security">
+                                <a class="large-image img-view" href="" >
+                                    <div>Sistema de Seguridad Activa</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/seguridadVial.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>    
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        MÓDULO 3. SISTEMA DE SEGURIDAD PASIVA
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body  d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="biker_pasive_security">
+                                <a class="large-image img-view" href="./page3-seguridad-pasiva.html" >
+                                    <div>Sistema de Seguridad Pasiva</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/normasTransito.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>    
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        MÓDULO 4. ELEMENTOS DE PROTECCIÓN PERSONAL
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="protection_elements">
+                                <a class="large-image img-view" href="page4-elementos-proteccion.html" >
+                                    <div>Elementos de protección personal</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/infraccionesTransito.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        MÓDULO 5. TIPOS DE MOTOCICLETAS
+                    </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="bike_types">
+                                <a class="large-image img-view" href="page5-tipos-motocicletas.html" >
+                                    <div>Tipos de motocicletas</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/infraccionesTransito.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                        MÓDULO 6. NORMAS DE TRÁNSITO
+                    </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="bike_vial_rules">
+                                <a class="large-image img-view" href="page6-normas-de-transito.html" >
+                                    <div>Normas de transito</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/normasTransito.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                        MÓDULO 7. NORMAS ESPECÍFICAS AL MOTOCICLISTA
+                    </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="biker_rules">
+                                <a class="large-image img-view" href="page7-normas-motociclista.html" >
+                                    <div>Normas específicas al motociclista</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/infraccionesTransito.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                        MÓDULO 8. SEÑALIZACIÓN VIAL
+                    </button>
+                </h2>
+                <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="bike_signals">
+                                <a class="large-image img-view" href="page8-senalizacion-vial.html" >
+                                    <div>Señalización vial</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
+                        MÓDULO 9. INFRACCIONES MÁS COMUNES
+                    </button>
+                </h2>
+                <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="common_offences">
+                                <a class="large-image img-view" href="page9-infracciones-comunes.html" >
+                                    <div>Infracciones más comunes</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                        MÓDULO 10. TÉCNICAS DE CONDUCCIÓN
+                    </button>
+                </h2>
+                <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="driving_techniques">
+                                <a class="large-image img-view" href="./page9-infracciones-de-transito.html" >
+                                    <div>Técnicas de conducción</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13">
+                        MÓDULO 11. RECOMENDACIONES
+                    </button>
+                </h2>
+                <div id="flush-collapse13" class="accordion-collapse collapse" aria-labelledby="flush-heading13" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper disabled-wrapper" id="bike_recommendations">
+                                <a class="large-image img-view" href="./page9-infracciones-de-transito.html" >
+                                    <div>Recomendaciones</div>
+                                    <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
+                                </a>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
+                        MÓDULO 12. CONDICIONES MÍNIMAS DEL CASCO PROTECTOR
+                    </button>
+                </h2>
+                <div id="flush-collapse14" class="accordion-collapse collapse" aria-labelledby="flush-heading14" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
+
+                        <div class="mb-5">
+                            <div class="locked-wrapper" id="helmet_minimun_req">
+                                    CONTENIDO AQII
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                        EVALUACIÓN FINAL
+                    </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <div id="begin-exam">
+                            <p id="begin-exam-locked">Evaluación no disponible hasta que no completes el curso</p>
+                            <a id="begin-exam-unlocked" class="hide" href="exam.html">Comenzar la evaluación</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEleven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                        ¡DESCARGA AQUÍ TU CERTIFICADO!
+                    </button>
+                </h2>
+                <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Certificado</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
 
 <script src="js/app.js"></script>
 <script>
@@ -342,50 +349,49 @@
     //         slides: 3
     //     },
     //     {
-    //         pageName: "elements_traffic",
-    //         slides: 25
+    //         pageName: "biker_documentation",
+    //         slides: 1
     //     },
     //     {
-    //         pageName: "traffic_accidents",
+    //         pageName: "biker_active_security",
     //         slides: 0
     //     },
     //     {
-    //         pageName: "risks",
-    //         slides: 9
-    //     },
-    //     {
-    //         pageName: "history",
+    //         pageName: "biker_pasive_security",
     //         slides: 0
     //     },
     //     {
-    //         pageName: "security",
-    //         slides: 5
+    //         pageName: "protection_elements",
+    //         slides: 0
     //     },
     //     {
-    //         pageName: "signals",
-    //         slides: 10
+    //         pageName: "bike_types",
+    //         slides: 0
     //     },
     //     {
-    //         pageName: "vial_rules",
+    //         pageName: "bike_vial_rules",
     //         slides: 18
     //     },
     //     {
-    //         pageName: "risks_factors",
-    //         slides: 8
+    //         pageName: "biker_rules",
+    //         slides: 0
     //     },
     //     {
-    //         pageName: "act_accidents",
-    //         slides: 13
+    //         pageName: "bike_signals",
+    //         slides: 10
     //     },
     //     {
-    //         pageName: "traffic_offense",
-    //         slides: 50
+    //         pageName: "common_offences",
+    //         slides: 0
     //     },
     //     {
-    //         pageName: ["video5", "video2", "video3", "video4"],
+    //         pageName: "driving_techniques",
+    //         slides: 6
+    //     },
+    //     {
+    //         pageName: "bike_recommendations",
     //         slides: 0 
-    //     },
-
+    //     }
     // ]
 
     // const modules = completedModules(pagesRoute, "modules_completed");
