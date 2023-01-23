@@ -253,7 +253,7 @@
 
                         <div class="mb-5">
                             <div class="locked-wrapper disabled-wrapper" id="driving_techniques">
-                                <a class="large-image img-view" href="./page9-infracciones-de-transito.html" >
+                                <a class="large-image img-view" href="./page10-tecnicas-conduccion.html" >
                                     <div>Técnicas de conducción</div>
                                     <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
                                 </a>
@@ -276,7 +276,7 @@
 
                         <div class="mb-5">
                             <div class="locked-wrapper disabled-wrapper" id="bike_recommendations">
-                                <a class="large-image img-view" href="./page9-infracciones-de-transito.html" >
+                                <a class="large-image img-view" href="./page11-recomendaciones.html" >
                                     <div>Recomendaciones</div>
                                     <img style="width: 675px; height: 410px;" src="assets/navbar/senalizacion-vial.png" alt=""/>
                                 </a>
@@ -288,7 +288,7 @@
                 </div>
             </div>
 
-            <div class="accordion-item">
+            <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-heading14">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
                         MÓDULO 12. CONDICIONES MÍNIMAS DEL CASCO PROTECTOR
@@ -306,7 +306,7 @@
                     </div>
                 </div>
             </div>
-            
+             -->
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTen">
@@ -331,7 +331,7 @@
                     </button>
                 </h2>
                 <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">Certificado</div>
+                    <div class="accordion-body">No disponible</div>
                 </div>
             </div>
 
@@ -343,58 +343,62 @@
 <script src="js/app.js"></script>
 <script>
 
-    // const pagesRoute = [
-    //     {
-    //         pageName: "introduction",
-    //         slides: 3
-    //     },
-    //     {
-    //         pageName: "biker_documentation",
-    //         slides: 1
-    //     },
-    //     {
-    //         pageName: "biker_active_security",
-    //         slides: 0
-    //     },
-    //     {
-    //         pageName: "biker_pasive_security",
-    //         slides: 0
-    //     },
-    //     {
-    //         pageName: "protection_elements",
-    //         slides: 0
-    //     },
-    //     {
-    //         pageName: "bike_types",
-    //         slides: 0
-    //     },
-    //     {
-    //         pageName: "bike_vial_rules",
-    //         slides: 18
-    //     },
-    //     {
-    //         pageName: "biker_rules",
-    //         slides: 0
-    //     },
-    //     {
-    //         pageName: "bike_signals",
-    //         slides: 10
-    //     },
-    //     {
-    //         pageName: "common_offences",
-    //         slides: 0
-    //     },
-    //     {
-    //         pageName: "driving_techniques",
-    //         slides: 6
-    //     },
-    //     {
-    //         pageName: "bike_recommendations",
-    //         slides: 0 
-    //     }
-    // ]
+    const pagesRoute = [
+        {
+            pageName: "bike-introduction",
+            slides: 3
+        },
+        {
+            pageName: "biker_documentation",
+            slides: 1
+        },
+        // {
+        //     pageName: "biker_active_security",
+        //     slides: 0
+        // },
+        {
+            pageName: "biker_pasive_security",
+            slides: 0
+        },
+        {
+            pageName: "protection_elements",
+            slides: 0
+        },
+        {
+            pageName: "bike_types",
+            slides: 0
+        },
+        {
+            pageName: "bike_vial_rules",
+            slides: 18
+        },
+        {
+            pageName: "biker_rules",
+            slides: 0
+        },
+        {
+            pageName: "bike_signals",
+            slides: 10
+        },
+        {
+            pageName: "common_offences",
+            slides: 0
+        },
+        {
+            pageName: "driving_techniques",
+            slides: 6
+        },
+        {
+            pageName: "bike_recommendations",
+            slides: 0 
+        },
+        {
+            pageName: ["begin-exam"],
+            slides: 0 
+        }
+    ]
 
-    // const modules = completedModules(pagesRoute, "modules_completed");
+    const modules = completedModules(pagesRoute, "modules_completed");
 </script>
 
 </body>
