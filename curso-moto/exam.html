@@ -193,7 +193,7 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q3" id="a22" value="a22">
+                            <input class="form-check-input" type="radio" name="q6" id="a22" value="a22">
                             <label class="form-check-label" for="a22">
                                 Falso
                             </label>
@@ -292,6 +292,79 @@ tránsito.</p>
                     </div>
                 </div>
 
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>11. ¿Cuando se acerca una intercepción se debe?
+                        </p>
+                        <img src="assets/signal_1.png" alt="">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q11" id="a31" value="a31">
+                            <label class="form-check-label" for="a31">
+                                A. Acelerar.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q11" id="a32" value="a32">
+                            <label class="form-check-label" for="a32">
+                                B. Disminuir la velocidad y asegurarse que otros vehículos y peatones no estén en la zona.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q11" id="a33" value="a33">
+                            <label class="form-check-label" for="a33">
+                                C. Ninguna de las anteriores.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>12. ¿En condiciones climatológicas adversas, usted debe?
+                        </p>
+                        <img src="assets/signal_1.png" alt="">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q12" id="a34" value="a34">
+                            <label class="form-check-label" for="a34">
+                                A. Reducir la velocidad y si las condiciones son críticas, detenerse y esperar que sean seguras.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q12" id="a35" value="a35">
+                            <label class="form-check-label" for="a35">
+                                B. Acelerar para llegar lo antes posible.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q12" id="a36" value="a36">
+                            <label class="form-check-label" for="a36">
+                                C. Ninguna de las anteriores.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>13. ¿No de bebo adelantar los vehículos por la derecha?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q13" id="a37" value="a37">
+                            <label class="form-check-label" for="a37">
+                                Verdadero
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="q13" id="a38" value="a38">
+                            <label class="form-check-label" for="a38">
+                                Falso
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
 
                 
 
@@ -349,7 +422,7 @@ const exam = () => {
         window.location.href = "index.html";
     }
 
-    const correctAnswers=[{value:"a2",score:10},{value:"a7",score:10},{value:"a10",score:10},{value:"a16",score:10},{value:"a19",score:10},{value:"a21",score:10},{value:"a24",score:10},{value:"a26",score:10},{value:"a27",score:10},{value:"a29",score:10}];
+    const correctAnswers=[{"value":"a2","score":7.7},{"value":"a7","score":7.7},{"value":"a10","score":7.7},{"value":"a16","score":7.7},{"value":"a19","score":7.7},{"value":"a21","score":7.7},{"value":"a24","score":7.7},{"value":"a26","score":7.7},{"value":"a27","score":7.7},{"value":"a29","score":7.7},{"value":"a32","score":7.7},{"value":"a34","score":7.7},{"value":"a37","score":7.7}];
 
 
     const errorAlert = document.getElementById('error-alert');
@@ -375,6 +448,8 @@ const exam = () => {
                 result+=correctAnswers[i].score;
             }
         }
+
+        result = result > 100 ? 100 : Math.ceil(result);
         
         if (result >= 80) {
             localStorage.setItem('exam_2_completed', JSON.stringify({

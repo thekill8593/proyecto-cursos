@@ -16,7 +16,7 @@
 <body>
     <div class="header">
         <div class="header__title">
-            <span id="sl-title">MANEJO DEFENSIVO, SEGURIDAD VIAL Y NORMAS DE TRÁNSITO (CICSA)</span>
+            <span id="sl-title">OPERACIÓN SEGURO DE CARRO</span>
         </div>
     </div>
     <div class="container">
@@ -263,7 +263,8 @@
                     </button>
                 </h2>
                 <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">No disponible</div>
+                    <div class="accordion-body" id="certificate-unavailable">No disponible</div>
+                    <a class="mt-3 mb-5 d-block d-none" href="assets/certificate_carro.pdf" target="_blank" id="download-certificate">Descargar certificado</a>
                 </div>
             </div>
         </div>
@@ -327,6 +328,17 @@
     ]
 
     const modules = completedModules(pagesRoute, "modules_completed");
+
+    //check if show certificate
+    const examResult = JSON.parse(localStorage.getItem('exam_1_completed')) || null;
+    if (examResult && examResult.passedExam) {
+      const certificateUnavailable = document.getElementById("certificate-unavailable");
+      const downloadCertificate = document.getElementById("download-certificate");
+
+      certificateUnavailable.classList.add('d-none');
+      downloadCertificate.classList.remove('d-none');
+    }
+
 
 </script>
 

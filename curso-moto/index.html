@@ -15,7 +15,7 @@
 <body>
     <div class="header">
         <div class="header__title">
-            <span id="sl-title">OPERACIÓN SEGURA DE MOTOCICLETAS (CICSA)</span>
+            <span id="sl-title">OPERACIÓN SEGURA DE MOTOCICLETAS</span>
         </div>
     </div>
     <div class="container mb-4">
@@ -288,25 +288,32 @@
                 </div>
             </div>
 
-            <!-- <div class="accordion-item">
+
+            <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-heading14">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapse14">
-                        MÓDULO 12. CONDICIONES MÍNIMAS DEL CASCO PROTECTOR
+                        MÓDULO 12. VIDEOS
                     </button>
                 </h2>
                 <div id="flush-collapse14" class="accordion-collapse collapse" aria-labelledby="flush-heading14" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body d-flex align-items-center flex-wrap justify-content-center">
 
                         <div class="mb-5">
-                            <div class="locked-wrapper" id="helmet_minimun_req">
-                                    CONTENIDO AQII
+                            <div class="locked-wrapper disabled-wrapper" id="video-golden-rules">
+                                <h3>Video Reglas de oro motociclista</h3>
+                                <div class="video-responsive">
+                                    <video width="100%" height="auto" controls>
+                                        <source src="assets/Reglas_de_oro_para_motociclistas.m4v" type="video/mp4">
+                                      </video>
+                                </div>
+                                <i class="fa-solid fa-lock"></i>
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-             -->
+            
 
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTen">
@@ -331,7 +338,8 @@
                     </button>
                 </h2>
                 <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">No disponible</div>
+                    <div class="accordion-body" id="certificate-unavailable">No disponible</div>
+                    <a class="mt-3 mb-5 d-block d-none" href="assets/certificate_moto.pdf" target="_blank" id="download-certificate">Descargar certificado</a>
                 </div>
             </div>
 
@@ -344,6 +352,7 @@
 <script>
 
     const pagesRoute = [
+        
         {
             pageName: "bike-introduction",
             slides: 3
@@ -393,12 +402,23 @@
             slides: 0 
         },
         {
-            pageName: ["begin-exam"],
+            pageName: ["video-golden-rules","begin-exam"],
             slides: 0 
         }
     ]
 
     const modules = completedModules(pagesRoute, "modules_completed");
+
+    //check if show certificate
+    const examResult = JSON.parse(localStorage.getItem('exam_2_completed')) || null;
+    if (examResult && examResult.passedExam) {
+      const certificateUnavailable = document.getElementById("certificate-unavailable");
+      const downloadCertificate = document.getElementById("download-certificate");
+
+      certificateUnavailable.classList.add('d-none');
+      downloadCertificate.classList.remove('d-none');
+    }
+
 </script>
 
 </body>
