@@ -77,7 +77,7 @@ body {
 .header::after {
     content: '';
     width: 160px;
-    height: 70px;
+    height: 100px;
     position: absolute;
     background-image: url(../assets/logos/final_tabasco.png);
     background-position: center center;
@@ -85,7 +85,6 @@ body {
     background-size: cover;
     left: 0;
     top: 0;
-    margin-top: 10px;
 }
 
 .header::before {
@@ -100,6 +99,7 @@ body {
     left: 0;
     margin-top: 90px;
     margin-left: 0px;
+    display: none !important;
 }
 
 

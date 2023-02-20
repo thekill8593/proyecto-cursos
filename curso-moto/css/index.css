@@ -97,7 +97,7 @@ content: '';
 width: 160px;
 height: 100px;
 position: absolute;
-background-image: url(../assets/logos/sistemas_de_gestion.jpg);
+background-image: url(../assets/logos/carso.png);
 background-position: center center;
 background-size: 100%;
 background-repeat: no-repeat;
@@ -115,7 +115,7 @@ margin-bottom: 2rem;
 .header::after {
 content: '';
 width: 160px;
-height: 70px;
+height: 100px;
 position: absolute;
 background-image: url(../assets/logos/final_tabasco.png);
 background-position: center center;
@@ -123,7 +123,6 @@ background-repeat: no-repeat;
 background-size: cover;
 left: 0;
 top: 0;
-margin-top: 10px;
 }
 
 .header::before {
@@ -138,6 +137,7 @@ background-size: 100%;
 left: 0;
 margin-top: 95px;
 margin-left: 0px;
+display: none !important;
 }
 
 
